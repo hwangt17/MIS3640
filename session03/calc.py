@@ -27,5 +27,5 @@ print(f'I will get home at {return_date_hr}:{return_date_min}am for breakfast.')
 print('4. If my average grade rises from 82 to 89. What is the percentage of the increase?')
 grade_1 = 82
 grade_2 = 89
-grade_inc = 89/82-1
-print(f'{grade_inc:.1%} increase')
+grade_inc = (grade_2 / grade_1)-1
+print(f'{grade_inc:.1%} increase.')

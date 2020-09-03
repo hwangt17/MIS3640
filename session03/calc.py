@@ -3,7 +3,7 @@ import math
 print('1. What is the volume of a sphere with radius 5?')
 r = 5 #radius of the sphere
 sphere = (4/3) * math.pi * r ** 3 #volume of a sphere equation
-print(f'The volume of the sphere is {sphere}.')
+print(f'The volume of the sphere is {sphere:.2f}m^3.')
 
 print('2. Suppose the cover price of a book is $24.95, but bookstores get a 40 percent discount. Shipping costs $3 for the first copy and 75 cents for each additional copy. What is the total wholesale cost for 60 copies?')
 cover = 24.95

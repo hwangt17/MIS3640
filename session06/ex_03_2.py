@@ -6,7 +6,7 @@ carl = turtle.Turtle()
 #half circles
 def yin_yang(t):
     for i in range(2):
-        ex_03.move(carl, 0, -1)
+        ex_03.move(carl, 0, 0)
         ex_03.arc(carl, 100, 180)
 
 #small circles

@@ -34,4 +34,5 @@ small_circles(frank)
 ex_03.move(frank, 0, -triangle_length)
 ex_03.circle(frank, triangle_length)
 
+
 turtle.mainloop()

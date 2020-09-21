@@ -54,10 +54,10 @@ def break_demo():
     print('Done!')
 
 def main():
-    #sum_all()
+    sum_all()
     #sum_odd()
     #countdown(5)
-    break_demo()
+    #break_demo()
 
 if __name__ == "__main__":
     main()

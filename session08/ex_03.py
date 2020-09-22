@@ -17,7 +17,7 @@ def test_square_root():
     print('------------------------------------------------------------')
     for i in range(1,10):
         diff = mysqrt(i) - math.sqrt(i)
-        print(i,'\t',f'{mysqrt(i):.11f}','\t',f'{math.sqrt(i):.11f}','\t',diff)
+        print(f'{i} \t {mysqrt(i):.11f} \t {math.sqrt(i):.11f} \t {diff}')
 
 def main():
     test_square_root()

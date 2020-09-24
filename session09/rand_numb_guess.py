@@ -26,6 +26,10 @@ def guess_game():
             print('your guess is too low')
         elif user_num == rand_num:
             print(f'Good job {user_name}! You guessed my number in {i+1} times')
+            break
+    if user_num != rand_num:
+        print(f'Nope, the number I was thinking of is {rand_num}')
+
 
 def main():
     guess_game()

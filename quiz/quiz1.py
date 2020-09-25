@@ -126,9 +126,9 @@ If n is 5, expected output is:
 
 
 def print_numbers(n):
-    for row in range(1, n+1):
-        for column in range(1, n+1):
-            print(column, end=" ")
+    for row in range(n):
+        for column in range(row+1):
+            print(n-row, end=" ")
         print(" ")
 
 
@@ -136,7 +136,7 @@ def print_numbers(n):
 # following lines and run this file to test!
 
 
-# print_numbers(5)
+print_numbers(5)
 # # expect:
 # # 5
 # # 4 4
@@ -144,7 +144,7 @@ def print_numbers(n):
 # # 2 2 2 2
 # # 1 1 1 1 1
 
-# print_numbers(9)
+print_numbers(9)
 # # expect:
 # # 9
 # # 8 8

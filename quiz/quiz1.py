@@ -52,13 +52,17 @@ def is_special(n):
     Return False if n is divisible by 100 (for example, 300); the only
     exception is when n is divisible by 400(for example, 2400), return True.
     """
-    if n%4 == 0:
+
+    if n%4 == 0 and n%100 == 0:
+        if n%400 != 0:
+            return False
+        else:
+            return True
+    elif n%4 == 0:
         return True
-    elif n%100 == 0:
+    else:
         return False
-    elif n%100 == 0 and n%400 == 0:
-        return True
-    return False
+
 
 # When you've completed your function, uncomment the
 # following lines and run this file to test!

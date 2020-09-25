@@ -89,10 +89,10 @@ def calculate_avg(n):
     all the integers between 1 and n (inclusive).
     """
     sum = 0
-    for i in range(n):
-        sum = sum + i
+    for i in range(n+1):
+        sum = sum + (i ** 3)
 
-    avg = sum / n
+    avg = sum /n
     return avg
 
 
@@ -103,9 +103,9 @@ def calculate_avg(n):
 
 print(calculate_avg(1))
 # # expect: 1.0
-# print(calculate_avg(2))
+print(calculate_avg(2))
 # # expect: 4.5
-# print(calculate_avg(5))
+print(calculate_avg(5))
 # # expect: 45.0
 
 
@@ -136,7 +136,7 @@ def print_numbers(n):
 # following lines and run this file to test!
 
 
-print_numbers(5)
+# print_numbers(5)
 # # expect:
 # # 5
 # # 4 4

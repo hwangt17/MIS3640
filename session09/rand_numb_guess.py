@@ -11,14 +11,22 @@ import random
 # 8. After 6 tries, Return “You lose!”
 
 
-def guess_game():
-    
-    rand_num = random.randrange(1,21)
+def guess_game(max_num = 20, total_tries = 6):
+    """
+    This is a random number guessing game. 
+    Guess a number between 1 - 20 with total 6 tries to guess the number correct. 
+    The program will tell us if the guess is too high or too low.
+    The maximum random number is max_num, 20 (default).
+    The total number of tries is total_tries, 6 (default).
+    """
+
+
+    rand_num = random.randrange(1,max_num+1)
 
     user_name = str(input('Hello! What is your name? '))
-    print(f'Well, {user_name}, I am thinking of a number between 1 and 20.')
+    print(f'Well, {user_name}, I am thinking of a number between 1 and {max_num}.')
 
-    for i in range(6):
+    for i in range(total_tries):
         user_num = int(input('Take a guess: '))
         if user_num > rand_num:
             print('your guess is too high')

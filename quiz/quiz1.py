@@ -92,7 +92,7 @@ def calculate_avg(n):
     for i in range(n):
         sum = sum + i
 
-    avg = sum / len(n)
+    avg = sum / n
     return avg
 
 
@@ -126,8 +126,8 @@ If n is 5, expected output is:
 
 
 def print_numbers(n):
-    for row in range(1, row+1):
-        for column in range(1, row+1):
+    for row in range(1, n+1):
+        for column in range(1, n+1):
             print(column, end=" ")
         print(" ")
 

@@ -12,18 +12,27 @@ def sum_uniques(a, b, c):
     Given 3 integers, a b c, return their sum. If two numbers are the same,
     only return the other number. If three numbers are the same, return 0.
     """
-    pass
-
+    if a == b:
+        return c
+    elif b == c:
+        return a
+    elif a == c:
+       return b
+    elif a == b == c:
+        return 0
+    else:
+        return a+b+c
 
 # When you've completed your function, uncomment the
 # following lines and run this file to test!
 
 
-# print(sum_uniques(2020, 9, 22))
+
+#print(sum_uniques(2020, 9, 22))
 # # expect: 2051
-# print(sum_uniques(10, 1, 10))
+#print(sum_uniques(10, 1, 10))
 # # expect: 1
-# print(sum_uniques(10, 10, 10))
+#print(sum_uniques(10, 10, 10))
 # # expect: 0
 
 
@@ -43,20 +52,24 @@ def is_special(n):
     Return False if n is divisible by 100 (for example, 300); the only
     exception is when n is divisible by 400(for example, 2400), return True.
     """
-    pass
-
+    if n%4 == 0:
+        return True
+    elif n%100 == 0:
+        return False
+    elif n%100 == 0 and n%400 == 0:
+        return True
+    return False
 
 # When you've completed your function, uncomment the
 # following lines and run this file to test!
 
-
-# print(is_special(2020))
+print(is_special(2020))
 # # expect: True
-# print(is_special(300))
+print(is_special(300))
 # # expect: False
-# print(is_special(2019))
+print(is_special(2019))
 # # expect: False
-# print(is_special(2000))
+print(is_special(2000))
 # # expect: True
 
 
@@ -75,14 +88,20 @@ def calculate_avg(n):
     Given integer n, return the average of cubes of
     all the integers between 1 and n (inclusive).
     """
-    pass
+    sum = 0
+    for i in range(n):
+        sum = sum + i
+
+    avg = sum / len(n)
+    return avg
+
 
 
 # When you've completed your function, uncomment the
 # following lines and run this file to test!
 
 
-# print(calculate_avg(1))
+print(calculate_avg(1))
 # # expect: 1.0
 # print(calculate_avg(2))
 # # expect: 4.5
@@ -107,14 +126,17 @@ If n is 5, expected output is:
 
 
 def print_numbers(n):
-    pass
+    for row in range(1, row+1):
+        for column in range(1, row+1):
+            print(column, end=" ")
+        print(" ")
 
 
 # When you've completed your function, uncomment the
 # following lines and run this file to test!
 
 
-# print_numbers(5)
+print_numbers(5)
 # # expect:
 # # 5
 # # 4 4

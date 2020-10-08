@@ -114,7 +114,17 @@ def is_anagram(word1, word2):
     >>> is_anagram([1, 2, 2], [2, 1, 2])
     Ture
     """
-    return
+    length_w1 = len(word1)
+    length_w2 = len(word2)
+
+    if length_w1 != length_w2:
+        return False
+    
+    for i in range(length_w1):
+        if sorted(word1) == sorted(word2):
+            return True
+        else:   
+            return False
 
 
 def has_duplicates(s):
@@ -130,7 +140,10 @@ def has_duplicates(s):
     >>> print(has_duplicates('abba'))
     True
     """
-    return
+    for i in s:
+        if s.count(i) > 1:
+            return True
+    return False
 
 
 def has_adjacent_duplicates(s):
@@ -148,7 +161,12 @@ def has_adjacent_duplicates(s):
     >>> print(has_adjacent_duplicates('abbc'))
     True
     """
-    return
+    length = len(s)
+
+    for i in range(length - 1):
+        if s[i] == s[i + 1]:
+            return True
+    return False
 
 
 def main():
@@ -166,12 +184,16 @@ def main():
     print(is_sorted([1, 2, 2]))
     print(is_sorted(['b', 'a']))
 
-    # print(is_anagram('stop', 'pots'))
-    # print(is_anagram('different', 'letters'))
-    # print(is_anagram([1, 2, 2], [2, 1, 2]))
+    print(is_anagram('stop', 'pots'))
+    print(is_anagram('different', 'letters'))
+    print(is_anagram([1, 2, 2], [2, 1, 2]))
 
-    # print(has_duplicates('cba'))
-    # print(has_duplicates('abba'))
+    print(has_duplicates('cba'))
+    print(has_duplicates('abba'))
+
+    print(has_adjacent_duplicates('cba'))
+    print(has_adjacent_duplicates('abca'))
+    print(has_adjacent_duplicates('abbc'))
 
 
 if __name__ == "__main__":

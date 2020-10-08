@@ -10,7 +10,13 @@ def nested_sum(t):
     >>> nested_sum(t)
     21
     """
-    return
+    s = 0
+    for i in t:
+        if isinstance(i, list):
+            s += nested_sum(i)
+        else:
+            s += i 
+    return s
 
 
 def cumsum(t):
@@ -25,7 +31,13 @@ def cumsum(t):
     >>> cumsum(t)
     [1, 3, 6]
     """
-    return
+    s = 0
+    cum = []
+    length = len(t)
+    for i in range(length):
+        s += t[i]
+        cum.append(s)
+    return cum
 
 
 def middle(t):
@@ -40,7 +52,7 @@ def middle(t):
     >>> middle(t)
     [2, 3]
     """
-    return
+    return t[1:-1]
 
 
 def chop(t):
@@ -56,7 +68,9 @@ def chop(t):
     >>> t
     [2, 3]
     """
-    return
+    t.remove(t[0])
+    t.pop()
+    return t
 
 
 def is_sorted(t):
@@ -72,7 +86,13 @@ def is_sorted(t):
     >>> is_sorted(['b', 'a'])
     False
     """
-    return
+    s = t[:]
+    s.sort()
+    if s == t:
+        return True
+    else:
+        return False
+    
 
 
 def is_anagram(word1, word2):
@@ -133,18 +153,18 @@ def has_adjacent_duplicates(s):
 
 def main():
     t = [[1, 2], [3], [4, 5, 6]]
-    # print(nested_sum(t))
+    print(nested_sum(t))
 
-    # t = [1, 2, 3]
-    # print(cumsum(t))
+    t = [1, 2, 3]
+    print(cumsum(t))
 
-    # t = [1, 2, 3, 4]
-    # print(middle(t))
-    # chop(t)
-    # print(t)
+    t = [1, 2, 3, 4]
+    print(middle(t))
+    chop(t)
+    print(t)
 
-    # print(is_sorted([1, 2, 2]))
-    # print(is_sorted(['b', 'a']))
+    print(is_sorted([1, 2, 2]))
+    print(is_sorted(['b', 'a']))
 
     # print(is_anagram('stop', 'pots'))
     # print(is_anagram('different', 'letters'))

@@ -75,24 +75,3 @@ def most_frequent(s):
     return d
 
 print(most_frequent('google'))
-
-# exercise02-2
-def set_anagrams(s):
-    fin = []
-    while s:
-        c = s[0]
-        t = []
-        r = []
-        for j in s:
-            if sorted(list(c)) == sorted(list(j)):
-                t.append(j)
-            else:
-                r.append(j)
-        fin.append(t)
-        s = r
-    return fin
-
-d = open('data/words.txt')
-l = list(d)
-listed = ['deltas', 'retainers', 'desalt', 'pants', 'slated', 'generating', 'ternaries', 'smelters', 'termless', 'salted', 'staled', 'greatening', 'lasted', 'resmelts']
-print(set_anagrams(d))

@@ -1,10 +1,10 @@
 
 
 def file_to_list(filename):
-    f = open(filename, 'r')
-    words = f.read().splitlines()
-    f.close()
-    return words
+    
+    with open(filename) as f:
+        l = f.read().splitlines() 
+    return l
 
 def sort_word(word_list):
     for t in word_list:

@@ -27,11 +27,11 @@ def main():
     p3 = BabsonPerson('Kevin')
     p4 = Person('Donald')
 
-    print(p4.id)
+    # print(p4.id)
 
     print(p2.speak("I feel good today"))
 
-    print(p4.speak("No one knows how I feel today better than me!"))
+    # print(p4.speak("No one knows how I feel today better than me!"))
 
 
 if __name__ == "__main__":

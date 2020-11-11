@@ -8,10 +8,14 @@ def item_pricing(item):
     for i in range(length):
         count = 97 + i
         letter = chr(count) #converted to str
-        if item.find(letter,c_1,c_2) >= 0:
-            print("ok")
+        if item.find(letter,c_1,c_2) == -1:
+            print('no')
         else:
-            count = count + 1
-            print("nope")
+            c_1 += 1
+            c_2 += 1
+            print('yes')
+        
 
-item_pricing('banana')
+        
+
+item_pricing('rice')

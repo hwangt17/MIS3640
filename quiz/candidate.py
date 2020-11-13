@@ -15,12 +15,17 @@ class Candidate:
         self.name = name
         self.winning_states = winning_states
         self.votes = votes
+        if self.winning_states is None:
+            self.winning_states = ''
+        for state in self.winning_states:
+            self.votes += ELECTORAL_VOTES.get(state)
 
     def __str__(self):
         """Return a string representation of this candidate,
         including name and winning state(s).
         """
-        return (f'{self.name}: {self.votes}')
+
+        return (f'{self.name}: {self.winning_states} {self.votes}')
 
     def __lt__(self, other):
         """return True if self's votes is lexicographically
@@ -33,6 +38,7 @@ class Candidate:
         """Adds a state to winning_states and updates votes.
         state: a string of state abbreviation
         """
+        self.winning_states.append(state)
         self.votes += ELECTORAL_VOTES.get(state)
         return self.winning_states
 

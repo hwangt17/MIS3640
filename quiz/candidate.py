@@ -25,7 +25,7 @@ class Candidate:
         including name and winning state(s).
         """
 
-        return (f'{self.name}: {self.winning_states} {self.votes}')
+        return (f'{self.name}: {self.winning_states}')
 
     def __lt__(self, other):
         """return True if self's votes is lexicographically

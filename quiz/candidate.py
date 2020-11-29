@@ -24,7 +24,6 @@ class Candidate:
         """Return a string representation of this candidate,
         including name and winning state(s).
         """
-
         return (f'{self.name}: {self.winning_states}')
 
     def __lt__(self, other):
